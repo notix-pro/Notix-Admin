@@ -19740,7 +19740,7 @@ process.umask = function() { return 0; };
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
-/******/ 			"admin/css/admin": 0,
+/******/ 			"css/admin/admin": 0,
 /******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
@@ -19791,9 +19791,9 @@ process.umask = function() { return 0; };
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["admin/css/admin","css/app"], () => (__webpack_require__("./resources/assets/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["admin/css/admin","css/app"], () => (__webpack_require__("./resources/assets/sass/app.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["admin/css/admin","css/app"], () => (__webpack_require__("./resources/assets/sass/admin/admin.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/admin/admin","css/app"], () => (__webpack_require__("./resources/assets/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/admin/admin","css/app"], () => (__webpack_require__("./resources/assets/sass/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/admin/admin","css/app"], () => (__webpack_require__("./resources/assets/sass/admin/admin.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

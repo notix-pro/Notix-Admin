@@ -16,9 +16,16 @@ class Role extends Model
 
     protected $fillable = [
         'name',
+        'display_name',
+        'slug',
         'description',
         'created_at',
         'updated_at',
         'deleted_at',
     ];
+
+    public function permissions()
+    {
+        return $this->belongsToMany(Permissions::class);
+    }
 }

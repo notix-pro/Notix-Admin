@@ -14,14 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('permissions', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+            $table->id();
 
             $table->string('name');
+            $table->string('display_name');
             $table->string('slug')->unique();
             $table->string('description')->nullable();
-            $table->boolean('is_active')->default(true);
 
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 

@@ -16,16 +16,11 @@ class Permissions extends Model
 
     protected $fillable = [
         'name',
+        'display_name',
         'slug',
         'description',
         'created_at',
         'updated_at',
         'deleted_at'
     ];
-
-    public function toggle($column)
-    {
-        $this->$column = !$this->$column;
-        $this->save();
-    }
 }

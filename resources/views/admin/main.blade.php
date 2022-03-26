@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="container">
-    <h1>Wrapper Main</h1>
+    <h1>Wrapper Main Admin</h1>
 </div>
 @endsection

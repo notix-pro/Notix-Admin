@@ -10,6 +10,8 @@
 
         <h1>Admin Main Dashboard page</h1>
         <br>
+        <b>{{ auth()->user()->name }}</b>
+        <br><br>
         <a href="{{ route('admin.logout') }}">logout</a>
     </div>
 @endsection

@@ -23,6 +23,12 @@ class RolesSeeder extends Seeder
                 'description' => 'Administrator role',
             ],
             [
+                'name' => 'moderator',
+                'display_name' => 'Moderator',
+                'slug' => 'moderator',
+                'description' => 'Moderator role',
+            ],
+            [
                 'name' => 'user',
                 'display_name' => 'User',
                 'slug' => 'user',

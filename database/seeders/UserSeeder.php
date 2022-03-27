@@ -21,12 +21,24 @@ class UserSeeder extends Seeder
                 'email' => 'admin@admin.com',
                 'password' => bcrypt('admin'),
                 'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Moderator',
+                'email' => 'moderator@moderator.com',
+                'password' => bcrypt('moderator'),
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'name' => 'User',
                 'email' => 'user@user.com',
                 'password' => bcrypt('user'),
                 'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ];
 

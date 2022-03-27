@@ -16,42 +16,58 @@ class PermissionSeeder extends Seeder
     public function run()
     {
         $permissions = [
+            // Permissions for top level admins. Something like change site info (name, description etc.), manage users, everything else what admin can do.
             [
-                'name' => 'user_management',
-                'display_name' => 'User Management',
-                'description' => 'Manage users',
-                'slug' => 'user-management',
+                'name' => 'admin_site_manage',
+                'display_name' => 'Site management',
+                'description' => 'User with this permission can change site info (name, description etc.)',
+                'slug' => 'admin-site-manage',
             ],
             [
-                'name' => 'permission_management',
-                'display_name' => 'Manage Permissions',
-                'description' => 'Manage permissions',
-                'slug' => 'permission-management',
+                'name' => 'admin_users_manage',
+                'display_name' => 'Users management',
+                'description' => 'User with this permission can manage users (add, edit, ban, delete).',
+                'slug' => 'admin-users-manage',
             ],
             [
-                'name' => 'role_management',
-                'display_name' => 'Manage Roles',
-                'description' => 'Manage roles',
-                'slug' => 'role-management',
+                'name' => 'admin_manage_roles',
+                'display_name' => 'Roles management',
+                'description' => 'User with this permission can manage roles (add, edit, delete).',
+                'slug' => 'admin-manage-roles',
             ],
             [
-                'name' => 'user_role_management',
-                'display_name' => 'Manage User Roles',
-                'description' => 'Manage user roles',
-                'slug' => 'user-role-management',
+                'name' => 'admin_manage_permissions',
+                'display_name' => 'Permissions management',
+                'description' => 'User with this permission can manage permissions (add, edit, delete).',
+                'slug' => 'admin-manage-permissions',
             ],
             [
-                'name' => 'user_permission_management',
-                'display_name' => 'Manage User Permissions',
-                'description' => 'Manage user permissions',
-                'slug' => 'user-permission-management',
+                'name' => 'admin_manage_user_roles',
+                'display_name' => 'User roles management',
+                'description' => 'User with this permission can manage user roles (add, edit, delete).',
+                'slug' => 'admin-manage-user-roles',
+            ],
+            // Permissions for other admins.
+            [
+                'name' => 'moderator_manage_messages',
+                'display_name' => 'Messages management',
+                'description' => 'User with this permission can manage messages (respond, delete).',
+                'slug' => 'moderator-manage-reports',
             ],
             [
-                'name' => 'user_profile_management',
+                'name' => 'moderator_manage_comments',
+                'display_name' => 'Comments management',
+                'description' => 'User with this permission can manage comments (hide, delete).',
+                'slug' => 'moderator-manage-comments',
+            ],
+            [
+                'name' => 'moderator_user_profile_management',
                 'display_name' => 'Manage User Profiles',
                 'description' => 'Manage user profiles',
-                'slug' => 'user-profile-management',
+                'slug' => 'moderator-user-profile-management',
             ],
+
+            // Permissions for users. Something like change nickname, password, email, etc.
             [
                 'name' => 'user_profile_view',
                 'display_name' => 'View User Profiles',
@@ -63,30 +79,6 @@ class PermissionSeeder extends Seeder
                 'display_name' => 'Edit User Profiles',
                 'description' => 'Edit user profiles',
                 'slug' => 'user-profile-edit',
-            ],
-            [
-                'name' => 'user_profile_delete',
-                'display_name' => 'Delete User Profiles',
-                'description' => 'Delete user profiles',
-                'slug' => 'user-profile-delete',
-            ],
-            [
-                'name' => 'user_profile_create',
-                'display_name' => 'Create User Profiles',
-                'description' => 'Create user profiles',
-                'slug' => 'user-profile-create',
-            ],
-            [
-                'name' => 'admin_management',
-                'display_name' => 'Manage Admins',
-                'description' => 'Manage admins',
-                'slug' => 'admin-management',
-            ],
-            [
-                'name' => 'admin_site_management',
-                'display_name' => 'Manage Site',
-                'description' => 'Manage site',
-                'slug' => 'admin-site-management',
             ],
         ];
 

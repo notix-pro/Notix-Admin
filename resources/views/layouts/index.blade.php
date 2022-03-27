@@ -23,7 +23,7 @@
                 </div>
             </main>
             @auth
-                <form action="{{ route('admin.logout') }}" method="post" style="display: none;" >
+                <form action="" method="post" style="display: none;" >
                     @csrf
                 </form>
             @endauth

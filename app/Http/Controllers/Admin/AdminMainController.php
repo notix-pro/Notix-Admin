@@ -30,6 +30,7 @@ class AdminMainController extends Controller
             return view('admin.main');
         }
 
+        // Create custom error page for this errors.
         return response('You don\'t have access to view this page.' , Response::HTTP_FORBIDDEN);
     }
 }

@@ -1,26 +1,33 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use function auth;
+use function redirect;
+use function view;
 
 class LoginController extends Controller
 {
 
     public function showLoginForm()
     {
+        if (auth()->check()) {
+            return redirect()->route('admin.dashboard');
+        }
+
         return view('admin.login');
     }
 
     public function login(Request $request)
     {
         $this->validate($request, [
-            'email' => 'required|email',
-            'password' => 'required|min:6'
+            'login_username' => 'required',
+            'login_password' => 'required',
         ]);
 
-        if (auth()->attempt(['email' => $request->email, 'password' => $request->password])) {
+        if (auth()->attempt(['name' => $request->login_username, 'password' => $request->login_password])) {
             return redirect()->route('admin.dashboard');
         }
 

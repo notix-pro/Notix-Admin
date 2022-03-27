@@ -1,18 +1,32 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-    <div class="container">
-        <div class="">
-            @if(Session::has('message'))
+    <div class="login-form">
+        @if(Session::has('message'))
+            <div class="flash-message flash-error">
                 <p>{{ Session::get('message') }}</p>
-            @endif
+            </div>
+        @endif
+
+        <div class="form-card">
+            <div class="form-header">
+                <!-- Laravel show translated text in blade -->
+                <h3>@lang('admin/login.login_header')</h3>
+            </div>
+            <div class="form-content">
+                @foreach($errors->all() as $error)
+                    <div class="form-alert form-alert-danger">{{ $error }}</div>
+                @endforeach
+
+                <form method="post" action="{{ route('admin.login.submit') }}">
+                    @csrf
+                    <x-form.inputs.input inputId="login_username" inputName="login_username" :inputPlaceholder="__('admin/login.input.placeholder_login_username')" :labelText="__('admin/login.input.login_label_text_login')" />
+                    <x-form.inputs.input inputType="password" inputId="login_password" inputName="login_password" :inputPlaceholder="__('admin/login.input.placeholder_login_password')" :labelText="__('admin/login.input.login_label_text_password')" />
+
+                    <x-form.buttons.large-submit buttonId="login_submit" buttonName="login_submit" :buttonText="__('admin/login.input.login_submit_text')" />
+                </form>
+            </div>
+            <div class="form-footer"></div>
         </div>
-
-        <h1>Wrapper Login</h1>
-        <x-form.inputs.input inputId="Input Id" inputName="Input Name" inputPlaceholder="Input Placeholder" labelText="Label Text" />
-        <br><br>
-        <x-form.select selectId="Select Id" selectName="Select Name" labelText="Label Text"
-            :options="['' => 'Wybierz','option1' => 'Option 1', 'option2' => 'Option 2']"/>
-
     </div>
 @endsection

@@ -1,7 +1,15 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-<div class="container">
-    <h1>Wrapper Main Admin</h1>
-</div>
+    <div class="admin-container">
+        @if(Session::has('message'))
+            <div class="flash-message flash-error">
+                <p>{{ Session::get('message') }}</p>
+            </div>
+        @endif
+
+        <h1>Admin Main Dashboard page</h1>
+        <br>
+        <a href="{{ route('admin.logout') }}">logout</a>
+    </div>
 @endsection

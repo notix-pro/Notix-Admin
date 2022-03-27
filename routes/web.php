@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController;
 use App\Http\Controllers\Admin\AdminMainController;
-use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\MainController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,14 +16,16 @@ use App\Http\Controllers\Admin\LoginController;
 |
 */
 
-// This function is here temproarily to show the home page
 Route::get('/', [MainController::class, 'index'])->name('home');
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', [AdminMainController::class, 'index'])->name('admin.home');
+    Route::get('/', function () {
+        return redirect()->route('admin.login');
+    });
+    Route::get('/dashboard', [AdminMainController::class, 'index'])->name('admin.dashboard');
 
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('admin.login');
-    Route::post('/login', [LoginController::class, 'login']);
+    Route::post('/login', [LoginController::class, 'login'])->name('admin.login.submit');
     Route::get('/logout', [LoginController::class, 'logout'])->name('admin.logout');
 });
 

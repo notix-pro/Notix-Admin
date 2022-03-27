@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ trans('static.site_name') }}</title>
 
-    @include('_static/_styles')
+    @include('admin/_static/_styles')
 </head>
 <body>
 <div class="app-wrapper">

@@ -4,6 +4,7 @@
 <a href="https://github.com/notix-pro/Notix-Admin/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/notix-pro/Notix-Admin" alt="License"></a>
 <a href="https://github.com/notix-pro/Notix-Admin/issues"><img src="https://img.shields.io/github/issues/notix-pro/Notix-Admin" alt="Issues"></a>
 <a href="https://github.com/notix-pro/Notix-Admin/commits/master"><img src="https://img.shields.io/github/last-commit/notix-pro/Notix-Admin" alt="Last commit"></a>
+<a href="https://github.com/notix-pro/Notix-Admin/commits/master"><img src="https://img.shields.io/github/commit-activity/w/notix-pro/Notix-Admin" alt="Commits in this week"></a>
 </p>
 
 ## About NOTIX Admin

@@ -16,5 +16,8 @@ return [
         'placeholder_login_password' => 'Podaj hasło',
         'login_submit_text' => 'Zaloguj',
     ],
+    'errors' => [
+        'must_logged_in' => 'Musisz być zalogowany aby przejść do panelu administracyjnego.',
+    ],
 
 ];

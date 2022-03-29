@@ -16,5 +16,7 @@ return [
         'placeholder_login_password' => 'Password',
         'login_submit_text' => 'Login',
     ],
-
+    'errors' => [
+        'must_logged_in' => 'You must be logged in to access this page.',
+    ],
 ];

@@ -4,8 +4,11 @@
     <div class="login-form">
         @if(Session::has('message'))
             <div class="flash-message flash-error">
-                <p>{{ Session::get('message') }}</p>
+                <p>{{ __(Session::get('message')) }}</p>
             </div>
+            <script>
+                hideElement('.flash-message', 3000);
+            </script>
         @endif
 
         <div class="form-card">
@@ -14,6 +17,7 @@
                 <h3>@lang('admin/login.login_header')</h3>
             </div>
             <div class="form-content">
+
                 @foreach($errors->all() as $error)
                     <div class="form-alert form-alert-danger">{{ $error }}</div>
                 @endforeach

@@ -7,6 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ trans('static.site_name') }}</title>
 
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/notix.js') }}"></script>
+
     @include('admin/_static/_styles')
 </head>
 <body>

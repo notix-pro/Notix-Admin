@@ -15,4 +15,9 @@ class MainController extends Controller
     {
         return view('main');
     }
+
+    public function _error()
+    {
+        return view('_static._error');
+    }
 }

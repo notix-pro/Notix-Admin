@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\View\View;
 use Symfony\Component\HttpFoundation\Response;
 
 class AdminMainController extends Controller
@@ -22,7 +24,7 @@ class AdminMainController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function index()
     {
@@ -30,7 +32,9 @@ class AdminMainController extends Controller
             return view('admin.main');
         }
 
-        // Create custom error page for this errors.
-        return response('You don\'t have access to view this page.' , Response::HTTP_FORBIDDEN);
+        return view('_static._error', [
+            'error' => '403',
+            'message' => 'You are not authorized to access this page.',
+        ]);
     }
 }

@@ -10,7 +10,6 @@ use function view;
 
 class LoginController extends Controller
 {
-
     public function showLoginForm()
     {
         if (auth()->check()) {
@@ -19,6 +18,7 @@ class LoginController extends Controller
 
         return view('admin.login');
     }
+
 
     public function login(Request $request)
     {

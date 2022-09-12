@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ trans('static.site_name') }} - Error: {{ $error }}</title>
+    <title>{{ trans('static.site_name') }} - {{ __('errors.error.' . $error . '.title') }}</title>
 
     <script src="https://kit.fontawesome.com/ec6d6a4c89.js" crossorigin="anonymous"></script>
 
@@ -13,6 +13,7 @@
         body, html {
             margin: 0;
             padding: 0;
+            overflow: hidden;
         }
 
         .container {
@@ -22,11 +23,6 @@
             align-items: center;
             align-content: center;
             height: 100vh;
-        }
-        h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
         }
         .code {
             font-size: 2.5em;
@@ -60,10 +56,9 @@
     <div class="app-body">
         <main>
             <div class="container">
-                <a href="{{ url()->route('home') }}"><i class="fa-solid fa-angle-left"></i>&nbsp;Return</a>
-                <h1>Error H1</h1>
+                <a href="{{ url()->route('home') }}"><i class="fa-solid fa-angle-left"></i>&nbsp;@lang('errors.error_page.back-home')</a>
                 <div class="code">{{ $error }}</div>
-                <div class="message">{{ $message }}</div>
+                <div class="message">{{ __('errors.error.' . $error . '.message') }}</div>
             </div>
         </main>
     </div>

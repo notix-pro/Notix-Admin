@@ -17,6 +17,9 @@
                 <h3>@lang('admin/login.login_header')</h3>
             </div>
             <div class="form-content">
+                @if(session()->has('success'))
+                    MESS: {{ session()->get('success') }}
+                @endif
 
                 @foreach($errors->all() as $error)
                     <div class="form-alert form-alert-danger">{{ $error }}</div>

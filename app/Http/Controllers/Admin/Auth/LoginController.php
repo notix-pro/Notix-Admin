@@ -4,9 +4,6 @@ namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use function auth;
-use function redirect;
-use function view;
 
 class LoginController extends Controller
 {
@@ -18,7 +15,6 @@ class LoginController extends Controller
 
         return view('admin.login');
     }
-
 
     public function login(Request $request)
     {
@@ -32,12 +28,5 @@ class LoginController extends Controller
         }
 
         return redirect()->back()->with('error', 'Invalid Email or Password');
-    }
-
-    public function logout()
-    {
-        auth()->logout();
-
-        return redirect()->route('admin.login');
     }
 }

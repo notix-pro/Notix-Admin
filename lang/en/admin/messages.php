@@ -9,7 +9,7 @@ return [
 
     'popup' => [
         'success' => [
-            'login' => '',
+            'login' => 'Successfully logged in.',
             'logout' => 'Successfully logged out.',
         ],
         'error' => [

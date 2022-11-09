@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Components\Form;
+namespace App\View\Admin\Components\Form\Inputs;
 
 use Illuminate\View\Component;
 
-class Select extends Component
+class Input extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class Select extends Component
      */
     public function render()
     {
-        return view('components.form.select');
+        return view('admin.components.form.inputs.input');
     }
 }

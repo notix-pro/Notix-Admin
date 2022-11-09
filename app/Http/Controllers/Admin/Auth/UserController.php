@@ -14,6 +14,6 @@ class UserController extends Controller
     {
         auth()->logout();
 
-        return redirect()->route('admin.login')->with('success', trans('messages.popup.success.logout'));
+        return redirect()->route('admin.login')->with('success', trans('admin/messages.popup.success.logout'));
     }
 }

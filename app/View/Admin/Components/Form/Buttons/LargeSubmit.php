@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Components\Form;
+namespace App\View\Admin\Components\Form\Buttons;
 
 use Illuminate\View\Component;
 
-class ReCaptcha extends Component
+class LargeSubmit extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class ReCaptcha extends Component
      */
     public function render()
     {
-        return view('components.form.re-captcha');
+        return view('admin.components.form.buttons.large-submit');
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Components\Form\Buttons;
+namespace App\View\Admin\Components\Form\Inputs;
 
 use Illuminate\View\Component;
 
-class LargeSubmit extends Component
+class Checkbox extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class LargeSubmit extends Component
      */
     public function render()
     {
-        return view('components.form.buttons.large-submit');
+        return view('admin.components.form.inputs.checkbox');
     }
 }

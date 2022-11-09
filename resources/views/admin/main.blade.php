@@ -12,6 +12,6 @@
         <br>
         <b>{{ auth()->user()->name }}</b>
         <br><br>
-        <a href="{{ route('admin.logout') }}">logout</a>
+        <a href="{{ route('admin.logout') }}">logout</a>0
     </div>
 @endsection

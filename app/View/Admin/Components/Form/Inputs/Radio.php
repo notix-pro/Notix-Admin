@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Components\Form\Inputs;
+namespace App\View\Admin\Components\Form\Inputs;
 
 use Illuminate\View\Component;
 
-class Checkbox extends Component
+class Radio extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class Checkbox extends Component
      */
     public function render()
     {
-        return view('components.form.inputs.checkbox');
+        return view('admin.components.form.inputs.radio');
     }
 }

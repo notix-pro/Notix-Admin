@@ -12,7 +12,7 @@ Coming soon
 
 ## Documentation
 
-All documentation will be available at this link when the first version is released [NOTIX Admin documentation](https://projekty.notix.pro/docs/Notix-Admin-Panel/).
+All documentation will be available at this link when the first version is released [NOTIX Admin documentation](https://notix.pro/projects/notix-admin/docs/).
 
 ## Security Vulnerabilities
 

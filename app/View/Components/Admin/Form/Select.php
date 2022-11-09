@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Admin\Components\Form\Buttons;
+namespace App\View\Components\Admin\Form;
 
 use Illuminate\View\Component;
 
-class BasicSubmit extends Component
+class Select extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class BasicSubmit extends Component
      */
     public function render()
     {
-        return view('components.form.buttons.basic-submit');
+        return view('components.admin.form.select');
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Admin\Components\Form;
+namespace App\View\Components\Admin\Form\Inputs;
 
 use Illuminate\View\Component;
 
-class ReCaptcha extends Component
+class Input extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class ReCaptcha extends Component
      */
     public function render()
     {
-        return view('components.form.re-captcha');
+        return view('components.admin.form.inputs.input');
     }
 }

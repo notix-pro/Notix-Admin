@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Admin\Components\Form\Buttons;
+namespace App\View\Components\Admin\Form\Inputs;
 
 use Illuminate\View\Component;
 
-class LargeSubmit extends Component
+class Radio extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class LargeSubmit extends Component
      */
     public function render()
     {
-        return view('components.form.buttons.large-submit');
+        return view('components.admin.form.inputs.radio');
     }
 }

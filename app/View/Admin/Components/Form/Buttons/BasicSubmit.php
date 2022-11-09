@@ -23,6 +23,6 @@ class BasicSubmit extends Component
      */
     public function render()
     {
-        return view('admin.components.form.buttons.basic-submit');
+        return view('components.form.buttons.basic-submit');
     }
 }

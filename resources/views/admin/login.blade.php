@@ -26,10 +26,10 @@
 
                 <form method="post" action="{{ route('admin.login.submit') }}">
                     @csrf
-                    <x-form.inputs.input inputId="login_username" inputName="login_username" :inputPlaceholder="__('admin/login.input.placeholder_login_username')" :labelText="__('admin/login.input.login_label_text_login')" />
-                    <x-form.inputs.input inputType="password" inputId="login_password" inputName="login_password" :inputPlaceholder="__('admin/login.input.placeholder_login_password')" :labelText="__('admin/login.input.login_label_text_password')" />
+                    <x-Admin.form.inputs.input inputId="login_username" inputName="login_username" :inputPlaceholder="__('admin/login.input.placeholder_login_username')" :labelText="__('admin/login.input.login_label_text_login')" />
+                    <x-Admin.form.inputs.input inputType="password" inputId="login_password" inputName="login_password" :inputPlaceholder="__('admin/login.input.placeholder_login_password')" :labelText="__('admin/login.input.login_label_text_password')" />
 
-                    <x-form.buttons.large-submit buttonId="login_submit" buttonName="login_submit" :buttonText="__('admin/login.input.login_submit_text')" />
+                    <x-Admin.form.buttons.large-submit buttonId="login_submit" buttonName="login_submit" :buttonText="__('admin/login.input.login_submit_text')" />
                 </form>
             </div>
             <div class="form-footer"></div>

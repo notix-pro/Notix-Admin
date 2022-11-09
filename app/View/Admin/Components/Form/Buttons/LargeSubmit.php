@@ -23,6 +23,6 @@ class LargeSubmit extends Component
      */
     public function render()
     {
-        return view('admin.components.form.buttons.large-submit');
+        return view('components.form.buttons.large-submit');
     }
 }

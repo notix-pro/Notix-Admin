@@ -23,6 +23,6 @@ class Checkbox extends Component
      */
     public function render()
     {
-        return view('admin.components.form.inputs.checkbox');
+        return view('components.form.inputs.checkbox');
     }
 }

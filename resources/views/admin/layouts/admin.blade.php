@@ -8,7 +8,7 @@
     <title>{{ trans('static.site_name') }}</title>
 
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/notix.js') }}"></script>
+    <script src="{{ asset('js/admin/notix.js') }}"></script>
 
     @include('admin/_static/_styles')
 </head>

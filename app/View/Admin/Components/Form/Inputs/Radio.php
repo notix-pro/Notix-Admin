@@ -23,6 +23,6 @@ class Radio extends Component
      */
     public function render()
     {
-        return view('admin.components.form.inputs.radio');
+        return view('components.form.inputs.radio');
     }
 }

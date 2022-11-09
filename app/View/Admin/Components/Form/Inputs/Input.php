@@ -23,6 +23,6 @@ class Input extends Component
      */
     public function render()
     {
-        return view('admin.components.form.inputs.input');
+        return view('components.form.inputs.input');
     }
 }

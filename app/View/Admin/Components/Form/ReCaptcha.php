@@ -23,6 +23,6 @@ class ReCaptcha extends Component
      */
     public function render()
     {
-        return view('admin.components.form.re-captcha');
+        return view('components.form.re-captcha');
     }
 }
